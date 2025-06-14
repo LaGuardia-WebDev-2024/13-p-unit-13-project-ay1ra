@@ -1,46 +1,32 @@
-/* Styling Only Related To ALL Pages */
-
-body {
-  padding-top: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
-  background-color: #C4E1E6 ;
-}
-/* ⬆⬆⬆⬆ Nav Bar Styling 
-~~~~~ Taken From: 
-https://www.w3schools.com/css/css_navbar_horizontal.asp */
-ul.nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #6482AD;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+#movie-result {
+  background: rgb(173, 178, 212);
+  border: 5px solid rgb(199, 217, 221);
+  font-size: 24px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-ul.nav li {
-  float: left;
-}
-
-ul.nav li a {
-  display: block;
-  color: #C4E1E6;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul.nav li a:hover:not(.active) {
-  background-color: #EFE4D2;
-}
-
-ul.nav .active {
-  background-color: #CD5656;
+#hobby-result {
+  background: rgb(173, 178, 212);
+  border: 5px solid rgb(199, 217, 221);
+  font-size: 24px;
+  height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 h1 {
-  width: 100%;
+  font-family: "Quicksand", sans-serif;
+color: rgb(100, 130, 173)}
+
+html {
+  background-color: rgb(245, 237, 237)
+  background-image: url(https://cdn.glitch.global/d5b6d0b6-808a-480a-89b8-d80613368069/vector-seamless-pattern-pink-question-260nw-1549300670.webp?v=1747152737797)
+}
+
+
+hr {
+  height: 5px;
+  background-color: rgb(199, 217, 221);
 }
