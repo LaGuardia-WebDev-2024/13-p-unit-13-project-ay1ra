@@ -1,86 +1,105 @@
-<!-- Final Project
+<!-- Unit 13 Project
 Requirements
-[ yes ] Customized HTML Page #1
-[ yes] Customized HTML Page #2 
-[ yes ] Customized HTML Page #3
-[ yes ] Customized HTML Page #4
+[yes] Two Interactive Drop-down Inputs 
+[yes] Two Different jQuery Animation Methods 
+[ yes] Add Five CSS Declarations
+[  ] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
-[ no ] Feature 3 - Include jQuery
-[ no ] Feature 4 - Embed Code from Spotify/Google Docs/YouTube
-[ no ] Feature 5 - Customized HTML Page #5
+[ no ] Feature 3 - .mouseover() Method
+[ no ] Feature 4 - :hover Feature 
+[ no ] Feature 5 - Add an Additional Interactive Drop-down
 -->
 
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Final Project</title>
+    <title>Unit 13 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <style>
-      /* Styling Only Related To THIS Page */
-      /*~~~~~ Taken From:
-      https://www.w3schools.com/howto/howto_css_parallax.asp*/
-      .parallax {
-        /* The image used */
-        background-image: url("https://cdn.glitch.global/7811d59e-9783-414f-9061-eb99ba298346/104_0016_3.jpg?v=1749226345510");
-
-        /* Set a specific height */
-        min-height: 500px;
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .textblock {
-        min-height: 500px;
-        background-color: #EFE4D2;
-        color: white;
-      }
-      .parent-flex {
-        display: flex;
-      }
-      .child-flex {
-        background-color: #CD5656;
-        margin: 30px;
-        padding: 10px;
-        text-align: justify;
-        width: 40%;
-      }
-      .para-1{
-        display: flex;
-        align-items: center;
-      }
-    </style>
   </head>
   <body>
-    <!-- ⬆⬆⬆⬆ Nav Bar -->
-    <ul class="nav">
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="art.html">Passions</a></li>
-      <li><a href="resume.html">Media</a></li>
-      <li style="float: right">
-       
+    <h1>How well do you know Ayira? ✩♬₊˚.</h1>
+    <hr />
+    <!-- Movie Question -->
+    <form id="movie-form">
+      <label>
+        🎥 What is my favorite movie?
+        <select id="movie-answer">
          
-      </li>
-      <li style="float: right">
-        <a target="_blank" href="https://www.linkedin.com/in/ayirajd4/"
-          ><img
-            src="https://cdn.glitch.global/7811d59e-9783-414f-9061-eb99ba298346/images.png?v=1747930986923"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
-    </ul>
+          <option value="movie1">White Chicks</option>
+          <option value="movie2">To All The Boy's I've Loved Before</option>
+          <option value="movie3">Love and Basketball</option>
+          <option value="movie4">Titanic</option>
+        </select>
+      </label>
+      <button type="submit">Check Movie Answer</button>
+    </form>
+    <div id="movie-result">  <img src="https://cdn.glitch.global/d5b6d0b6-808a-480a-89b8-d80613368069/download.jpg?v=1747152115876"
+   style="width: 90px; margin: -5px"/>
+    
+    <img src="https://cdn.glitch.global/d5b6d0b6-808a-480a-89b8-d80613368069/download-1.jpg?v=1749871024079"
+         style="width: 90px; margin: -5px" />
+      <img src="https://cdn.glitch.global/d5b6d0b6-808a-480a-89b8-d80613368069/download-2.jpg?v=1749871098690"
+            style="width: 90px; margin: -5px"
+           />
+      
+      <img src="https://cdn.glitch.global/d5b6d0b6-808a-480a-89b8-d80613368069/download-3.jpg?v=1749871100109"
+            style="width: 100px; margin: -5px"
+           />
+         </div>
+    <hr />
+    <!-- Book Question -->
+    <form id="hobby-form">
+      <label>
+        ⚽ What is my favorite hobby?
+        <select id="hobby-answer">
+          <option value="hobby1">Reading</option>
+          <option value="hobby2">Singing</option>
+          <option value="hobby3">Traveling</option>
+          <option value="hobby4">Shopping</option>
+        </select>
+      </label>
+      <button type="submit">Check Hobby Answer</button>
+    </form>
+    <div id="hobby-result"></div>
+    
+    
+  <img "src"> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      //Movie Question jQuery Code
+      $("#movie-form").on("submit", function (event) {
+        event.preventDefault();
 
-    <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
-    <h1> Ayira Imamu Jack-Davis </h1>
-    <div class="parallax"></div>
+        var $answer = $("#movie-answer");
+        var answer = $answer.val();
 
-  
+        if (answer === "movie1") {
+          $("#movie-result").text("You know me so well!!! ( ˶˘ ³˘)♡");
+        } else {
+          $("#movie-result").text("Try Again! (  •̀⤙•́  )");
+        }
+      });
+
+      //Book Question jQuery Code
+      $("#hobby-form").on("submit", function (event) {
+        event.preventDefault();
+
+        var $answer = $("#hobby-answer");
+        var answer = $answer.val();
+
+        if (answer === "hobby3") {
+          $("#hobby-result").text("OMG! Are you reading my mind? ( ˶°ㅁ°)!!");
+        } else {
+          $("#hobby-result").text("I guess you don't really know me ˙◠˙☹˙◠˙☹˙◠˙");
+        }
+      });
+    </script>
   </body>
+
+  <!--- Taken From Khan Academy HTML/JS: Making webpages interactive with jQuery-->
 </html>
