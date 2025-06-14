@@ -1,22 +1,46 @@
-#movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
-  font-size: 24px;
-  height: 160px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+/* Styling Only Related To ALL Pages */
+
+body {
+  padding-top: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background-color: #C4E1E6 ;
+}
+/* ⬆⬆⬆⬆ Nav Bar Styling 
+~~~~~ Taken From: 
+https://www.w3schools.com/css/css_navbar_horizontal.asp */
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #6482AD;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-#book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
-  font-size: 24px;
-  height: 160px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+ul.nav li {
+  float: left;
 }
 
-hr {
-  height: 5px;
-  background-color: black;
+ul.nav li a {
+  display: block;
+  color: #C4E1E6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a:hover:not(.active) {
+  background-color: #EFE4D2;
+}
+
+ul.nav .active {
+  background-color: #CD5656;
+}
+
+h1 {
+  width: 100%;
 }
